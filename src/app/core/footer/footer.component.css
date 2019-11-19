@@ -1,0 +1,11 @@
+:host {
+    display: block;
+    background-color: brown;
+    color: bisque;
+    text-align: center;    
+}
+
+footer {
+    margin: 0;
+    padding: 2rem;
+}

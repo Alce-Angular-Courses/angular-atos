@@ -4,6 +4,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CoreModule } from './core/core.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CoreModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
