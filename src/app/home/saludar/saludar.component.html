@@ -1,0 +1,13 @@
+<h2>Saludar</h2>
+<div class="form-group" [title]="mensaje">
+  <label for="name">Nombre</label>
+  <input type="text" class="form-control" name="" id="name" 
+    placeholder="Dime tu nombre" [(ngModel)]= 'nombre'>
+</div>
+<div>
+    <button type="button" (click)="onBorrar($event)"
+        class="btn btn-primary">Borrar</button>
+</div>
+<div>
+    Hola {{ nombre }}
+</div>

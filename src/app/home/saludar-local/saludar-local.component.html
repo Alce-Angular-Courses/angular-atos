@@ -1,0 +1,15 @@
+<h2>Saludar Referencias Locales</h2>
+<div class="form-group">
+  <label for="name">Nombre</label>
+  <input type="text" class="form-control" id="name" 
+    placeholder="Dime tu nombre" #refNombre>
+</div>
+<div>
+    <button type="button" (click)="refNombre.value = refNombre.value;"
+        class="btn btn-primary">Saludar</button>
+    <button type="button" (click)="refNombre.value = '';"
+        class="btn btn-primary">Borrar</button>
+</div>
+<div>
+    Hola {{ refNombre.value }}
+</div>
