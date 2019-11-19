@@ -15,16 +15,16 @@ function algoAsinc() {
         }, 2000)
     })
 }
-let resultado
-algoAsinc()
-.then(
-    (response) => { 
-        resultado = response
-        console.log(resultado)
-    }
-)
-.catch(
-    (error) => {
+
+// ES2017 async / await
+
+(async () => {
+    try {
+        let resultado = await algoAsinc()
+        console.log(resultado)        
+    } catch (error) {
         console.log(error.message)
     }
-)
+})()
+
+
