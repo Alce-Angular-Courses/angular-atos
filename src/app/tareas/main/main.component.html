@@ -1,1 +1,21 @@
-<p>main works!</p>
+<h2>Tareas</h2>
+
+<ats-tarea-new (addTarea)="addTarea($event)"></ats-tarea-new>
+
+<div class="mt-3">
+    <div  *ngIf="tareas.length; else mensaje">
+        <h3>Lista de tareas</h3>
+        <ul class="list-group">
+            <li class="list-group-item"
+                *ngFor="let item of tareas; let i = index">
+                <ats-tarea [tarea]='item' [id]='i'
+                (tareaChange)='onChange($event)'
+                (tareaDelete)='onDelete($event)'
+                ></ats-tarea>
+            </li>
+        </ul>
+    </div>
+    <ng-template #mensaje >
+        <p>{{ animo }}</p>
+    </ng-template>
+</div>
