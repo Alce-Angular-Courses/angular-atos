@@ -6,6 +6,8 @@
 </div>
 <button type="button" (click)="buscar()"
     class="btn btn-primary">Buscar</button>
+<button type="button" (click)="buscarAsync()"
+    class="btn btn-primary">Buscar Async</button>
 <button type="button" (click)="buscarRx()"
     class="btn btn-primary">BuscarRx</button>    
 <div *ngIf="libros.length">
@@ -17,3 +19,4 @@
     </ul>
 </div>
 
+<!-- {{ libros$ | async | json}} -->

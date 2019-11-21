@@ -1,0 +1,10 @@
+<p>Contact</p>
+<form action="" [formGroup]="form" (submit)='onSubmit()'> 
+    <input type="text" placeholder="nombre" formControlName="nombre">
+    <input type="password" placeholder="Password" formControlName="password">
+    <button type="submit" [disabled]='form.invalid'>Enviar</button>
+</form>
+
+<div>
+    {{ form.value | json }}
+</div>
