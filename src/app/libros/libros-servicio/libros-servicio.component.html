@@ -1,0 +1,19 @@
+<h3>Libros Google by Service</h3>
+<div class="form-group">
+  <label for="clave">Buscar dentro del título</label>
+  <input type="text" class="form-control" id="clave"
+  [formControl]="fcClave">
+</div>
+<button type="button" (click)="buscar()"
+    class="btn btn-primary">Buscar</button>
+<button type="button" (click)="buscarRx()"
+    class="btn btn-primary">BuscarRx</button>    
+<div *ngIf="libros.length">
+    <h3>Lista de libros</h3>
+    <ul class="list-group">
+        <li *ngFor="let item of libros" class="list-group-item">
+            {{ item.autores }} - {{ item.titulo}}
+        </li>
+    </ul>
+</div>
+
